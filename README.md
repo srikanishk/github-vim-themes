@@ -48,7 +48,15 @@ To try another theme inside Vim:
 
 ## Regenerate
 
-Install the upstream Neovim theme with your plugin manager first. For example,
+You do not need to regenerate anything to install or use these themes. The
+ready-to-use Vimscript files are already committed in `vim/colors/`.
+
+Regenerate only when you are maintaining this repo and want to rebuild the
+Vimscript files from newer upstream `projekt0n/github-nvim-theme` palette
+tokens. For example, regenerate after the upstream theme changes its GitHub
+Primer colors and you want this classic Vim copy to match those new colors.
+
+To regenerate, install or update the upstream Neovim theme first. For example,
 with vim-plug:
 
 ```vim
@@ -68,6 +76,9 @@ By default the generator reads Primer palette files from:
 ```
 
 Set `GITHUB_NVIM_THEME_PRIMITIVES` to use a different source directory.
+
+After regenerating, review the changed files in `vim/colors/`, run the verify
+commands below, and commit the updated generated themes.
 
 ## Verify
 
