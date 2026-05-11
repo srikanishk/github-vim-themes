@@ -1,0 +1,5 @@
+set termguicolors
+syntax enable
+
+" Use this after copying vim/colors/*.vim to ~/.vim/colors.
+colorscheme github_dark_dimmed
