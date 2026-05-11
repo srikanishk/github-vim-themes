@@ -25,14 +25,34 @@ Vimscript `highlight` commands, so they load in Vim 9 with `+termguicolors`.
 
 ## Install
 
-Copy the generated colorschemes into Vim's colors directory:
+Follow these steps on any computer where you want to use the themes.
+
+### 1. Clone the repo
+
+```sh
+git clone https://github.com/srikanishk/github-vim-themes.git
+cd github-vim-themes
+```
+
+### 2. Copy the colorschemes into Vim
+
+Vim loads user colorschemes from `~/.vim/colors`. Create that directory if it
+does not exist, then copy the generated theme files:
 
 ```sh
 mkdir -p ~/.vim/colors
 cp vim/colors/*.vim ~/.vim/colors/
 ```
 
-Then set a theme in `~/.vimrc`:
+### 3. Add the theme to `~/.vimrc`
+
+Open or create `~/.vimrc`:
+
+```sh
+vim ~/.vimrc
+```
+
+Add these lines:
 
 ```vim
 set termguicolors
@@ -40,10 +60,39 @@ syntax enable
 colorscheme github_dark_dimmed
 ```
 
-To try another theme inside Vim:
+Save and quit Vim.
+
+### 4. Open Vim
+
+```sh
+vim
+```
+
+Vim should now start with `github_dark_dimmed`.
+
+### 5. Try a different theme
+
+Inside Vim, run:
 
 ```vim
 :colorscheme github_light_default
+```
+
+If you like that theme better, update the `colorscheme` line in `~/.vimrc`:
+
+```vim
+colorscheme github_light_default
+```
+
+### 6. Update later
+
+When this repo gets new generated theme files, pull the latest changes and copy
+the colorschemes again:
+
+```sh
+cd github-vim-themes
+git pull
+cp vim/colors/*.vim ~/.vim/colors/
 ```
 
 ## Regenerate
